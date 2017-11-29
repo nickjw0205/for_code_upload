@@ -1,0 +1,1 @@
+GET http://search.naver.com/search.naver?where=nexearch&frm=ff&sm=oss&ie=utf8&query=%E3%85%88 HTTP/1.1
