@@ -1,0 +1,9 @@
+gcc -o types types.c
+gcc -o caplitalize capitalize.c
+gcc -o power_square power_square.c -lm
+gcc -o my_sqrt my_sqrt.c -lm
+./types
+./capitalize
+./power_square
+./my_sqrt
+
