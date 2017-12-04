@@ -5,7 +5,7 @@ import java.io.*;
 
 public class ProxyServer {
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = null;
+        ServerSocket s_socket = null;
         boolean listening = true;
 
         int port = 8888;	//setting server 
@@ -16,7 +16,7 @@ public class ProxyServer {
         }
 
         try {
-            serverSocket = new ServerSocket(port);
+            s_socket = new ServerSocket(port);
             System.out.println("Started on: " + port);
         } catch (IOException e) {
             System.err.println("Could not listen on port: " + args[0]);
@@ -24,8 +24,8 @@ public class ProxyServer {
         }
 
         while(listening) {
-            new ProxyThread(serverSocket.accept()).start();
+            new ProxyThread(s_socket.accept()).start();
         }
-        serverSocket.close();
+        s_socket.close();
     }
 }
