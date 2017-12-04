@@ -13,11 +13,6 @@ public class ProxyThread extends Thread {
     }
 
     public void run() {
-        //get input from user
-        //send request to server
-        //get response from server
-        //send response to user
-
         try {
             DataOutputStream out =
 		new DataOutputStream(socket.getOutputStream());
@@ -27,7 +22,6 @@ public class ProxyThread extends Thread {
             String inputLine, outputLine;
             int cnt = 0;
             String urlToCall = "";
-            ///////////////////////////////////
             //begin get request from client
             while ((inputLine = in.readLine()) != null) {
                 try {
