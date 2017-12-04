@@ -23,7 +23,7 @@ public class ProxyServer {
             System.exit(-1);
         }
 
-        while (listening) {
+        while(listening) {
             new ProxyThread(serverSocket.accept()).start();
         }
         serverSocket.close();
