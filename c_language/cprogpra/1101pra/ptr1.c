@@ -33,13 +33,14 @@ int main(){
 		print_triple_array("b",b,3,4,3);	
 		for(i = 0;i < 3;i++){
 				for(j = 0;j < 4;j++){
-					c = &b[i][0];
+					*(&a[0][0][0] + 4 * 3 *i + 3*j + k);
 
 				}
 		}
 		printf("\nAssigned c by b.\n");
 		printf("a[2][3] = %p\n",a[2][3]);
 		printf("b[2][3] = %p\n",b[2][3]);
+		printf("c[2][3] = %p\n",c[2][3]);
 		printf("*c[2][3] = %3.0f/n",*c[2][3]);
 		return 0;
 }
