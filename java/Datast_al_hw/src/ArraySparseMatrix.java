@@ -61,29 +61,6 @@ public class ArraySparseMatrix implements SparseMatrix {
 
 		int length = elements.length;
 		int cnt = 0;
-		/*--------------------*/
-		//		for(int i = 0;i < length;i++) {
-		//			for(int j = i + 1;j < length;j++) {
-		//				if(elements[i].row > elements[j].row) {
-		//					Entry copy1 = new Entry(9,9,9);
-		//					Entry copy2 = new Entry(9,9,9);
-		//					copy1 = elements[i].copy();
-		//					copy2 = elements[j].copy();
-		//					elements[i] = copy2;
-		//					elements[j] = copy1;					
-		//				}
-		//				if(elements[i].row == elements[j].row) {
-		//					if(elements[i].col > elements[j].col) {
-		//						Entry copy1 = new Entry(9,9,9);
-		//						Entry copy2 = new Entry(9,9,9);
-		//						copy1 = elements[i].copy();
-		//						copy2 = elements[j].copy();
-		//						elements[i] = copy2;
-		//						elements[j] = copy1;				
-		//					}
-		//				}
-		//			}
-		//		}
 		for(int i = length;i > 0;i--) {
 			for(int j = 0;j < i - 1;j++) {
 				if(elements[j].row > elements[j+1].row) {
@@ -96,47 +73,6 @@ public class ArraySparseMatrix implements SparseMatrix {
 				}
 			}
 		}
-		/*--------------------*/
-		//		for(int i = 0;i < elem;i++) {
-		//			System.out.println(elements[i].toString());
-		//		}
-		//		double[][] sm1 = new double[1024][1024]; 
-		//
-		//		for(int i = 0;i < 1024;i++) {
-		//			for(int j = 0;j < 1024; j++) {
-		//				sm1[i][j] = 0;
-		//			}
-		//		}
-		//		
-		//		int a = 0;
-		//		for(int i = 0;i < 1024;i++) {
-		//			for(int j = 0;j < 1024;j++) {
-		//				if(i == elements[a].row && j == elements[a].col) {
-		//					sm1[j][i] = elements[a].value;
-		//					a++;
-		//				}
-		//				if(a == elements.length) {
-		//					break;
-		//				}
-		//			}
-		//			if(a == elements.length) {
-		//				break;
-		//			}
-		//		}
-		//		
-		//		int elem = 0;
-		//		for(int i = 0;i < 1024;i++) {
-		//			for(int j = 0;j < 1024;j++) {
-		//				if(sm1[i][j] != 0) {
-		//					elem += 1;
-		////					System.out.println("i = " + i + " j = "+ j + " elem = " + sm1[i][j]);		
-		//				}
-		//			}
-		//		}
-		//
-		//		ArraySparseMatrix matrix = new ArraySparseMatrix(4, 3, elem);
-		//		
-		//		return matrix.create(sm1,4,3,elem);
 		return this;
 	}
 
