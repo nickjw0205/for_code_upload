@@ -41,73 +41,22 @@ public class DLinkedList<T> {
 	}
 
 	public void addFirst(Node<T> n) {
-//		if(header == null) {
-//			header = new Node(null, n, null);
-//		}
-//		
-//		else {
-//			Node<T> newlink = new Node(null, n, header);
-//			header.setPrev(newlink);
-//			header = newlink;
-//		}
 		addAfter(header,n);
 	}
 
 	public void addLast(Node<T> n) {
-//		if(header == null) {
-//			header = new Node(null, n, null);
-//		}
-//		
-//		else {
-//			Node<T> now = header;
-//			
-//			while(now.getNext() != null) {
-//				now = now.getNext();
-//			}
-//			
-//			Node<T> newlink = new Node(now, n, null);
-//			now.setNext(newlink);
-//		}
-//		size++;
 		addBefore(trailer,n);
 	}
 
 	public T removeFirst() {
-//		if(header == null) {
-//			return null;
-//		}
-//		
-//		header = header.getNext();
-//		header.setPrev(null);
-//		size--;
-//		return null;
-//		
 		remove(header.getNext());
 		return null;
 	}
 
 	public T removeLast() {
-//		if(header == null) {
-//			return null;
-//		}
-//		
-//		if(header.getNext() == null) {
-//			header = null;
-//			size--;
-//			return null;
 		remove(header.getPrev());
 		return null;
 		}
-//		
-//		Node<T> now = header;
-//		while(now.getNext().getNext() != null) {
-//			now = now.getNext();
-//		}
-//		
-//		now.setNext(null);
-//		size--;
-//		
-//		return null;
 
 	public void addAfter(Node<T> p, Node<T> n) {
 		n.setNext(p.getNext());
