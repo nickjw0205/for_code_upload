@@ -148,18 +148,30 @@ public class Quiz {
 		}
 
 		// result가 true이면 0을 만난것, false이면 0을 못 만난것
+	
 		return result;
 	}
 
 	//test_case
 	public static void main(String[] args) {
-//		int[] boxes = {3, 6, 4, 3, 3, 4, 3, 5, 0};
-//		int[] boxes = {3, 6, 4, 1, 3, 4, 2, 5, 3, 0};
-//		int[] boxes = {2, 1, 2, 0};
-//		int[] boxes = {1, 1, 1, 0};
-//		int[] boxes = {1, 2, 1, 2, 0};
-//		int[] boxes = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
-		int[] boxes = {3, 1, 2, 3, 0};
+//		int[] boxes = {3, 6, 4, 3, 3, 4, 3, 5, 0};	//false
+//		int[] boxes = {3, 6, 4, 1, 3, 4, 2, 5, 3, 0};	//true
+//		int[] boxes = {2, 1, 2, 0};		//false
+//		int[] boxes = {1, 1, 1, 0};		//true
+//		int[] boxes = {1, 2, 1, 2, 0};		//false
+//		int[] boxes = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};	//false
+//		int[] boxes = {3, 1, 2, 3, 0};	//true
+//		int[] boxes = {1, 2, 3, 2, 1, 2, 3, 9, 3, 2, 0}; //false
+//		int[] boxes = {1, 2, 1, 1, 1, 3, 1, 2, 0};	//true
+//		int[] boxes = {2, 4, 3, 1, 5, 2, 3, 1, 2, 3, 4, 7, 3, 2, 1, 9, 2, 1, 0};	//false
+//		int[] boxes = {0};	//true
+//		int[] boxes = {1, 3, 1, 4, 1, 5, 1, 2, 1, 1, 0};		//true
+//		int[] boxes = {5, 1, 2, 3, 1, 2, 3, 2, 1, 3, 1, 2, 3, 0};	//false
+//		int[] boxes = {1, 2, 1, 3, 0};	//false
+//		int[] boxes = {2, 0};	//false
+//		int[] boxes = {1, 2, 0};		//false
+//		int[] boxes = {2, 3, 1, 4, 1, 2, 0};		//false
+		int[] boxes = {1, 3, 1, 3, 1, 2, 3, 1, 2, 3, 0};		//true
 		int start = 0;
 
 		//true일때 
